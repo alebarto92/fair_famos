@@ -1,0 +1,10 @@
+CLEAN
+2023-02-10 13:33:41
+{"tipofile":"immagine","idele":"2","nome_tabella":"tb_experiments","name":"o_1gotl4ld414n98le1b4419k712hrc.jpg"}
+root_server= /var/www/html
+directoryfiles= /LABIMADB/file
+targetDirRemote= /LABIMADB/file/tb_experiments_2
+FTPUPLOADDIR= /web
+Ora invece ho messo FTPUPLOADDIR= /var/www/html
+errore creazione directory /var/www/html/LABIMADB/file/tb_experiments_2 oppure già presente
+filePath= ../tmpfiles/o_1gotl4ld414n98le1b4419k712hrc.jpg

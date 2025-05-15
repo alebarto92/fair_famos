@@ -1,0 +1,11 @@
+2025-04-24 14:48:51
+{"id":"94","draw":"1","columns":[{"data":"0","name":"","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}},{"data":"1","name":"","searchable":"true","orderable":"false","search":{"value":"","regex":"false"}},{"data":"2","name":"title","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}},{"data":"3","name":"Type_of_forcing","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}},{"data":"4","name":"field_of_test","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}},{"data":"5","name":"field_of_test_level2","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}},{"data":"6","name":"infrastructure","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}},{"data":"7","name":"Lab_name","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}},{"data":"8","name":"installation","searchable":"true","orderable":"true","search":{"value":"","regex":"false"}}],"start":"0","length":"50","search":{"value":"","regex":"false"},"_":"1745498931421"}
+SELECT tbe.id as chiaveprimaria,tbe.*,tft.*,tft2.*,tbInf.*,tbl.*,tbIns.*,ttf.* FROM tb_experiments tbe
+JOIN tb_field_of_test tft ON tbe.Field_of_test=tft.id
+LEFT JOIN tb_field_of_test_level_2 tft2 ON tft2.id=tbe.Field_of_test_level2
+LEFT JOIN tb_infrastructure tbInf ON tbInf.id=tbe.Infrastructure
+LEFT JOIN tb_Laboratory tbl ON tbl.id=tbe.Laboratory
+LEFT JOIN tb_installations tbIns ON tbIns.id=tbe.Installation
+LEFT JOIN tb_type_of_forcing ttf ON ttf.id=tbe.Type_of_forcing
+ WHERE (10=10  AND 10=10 ) AND (0=1 OR tbe.id_user=94 )
+ LIMIT 0, 50

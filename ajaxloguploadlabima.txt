@@ -1,0 +1,10 @@
+LABIMA
+2023-03-22 16:09:31
+{"tipofile":"immagine","idele":"1","nome_tabella":"tb_experiments","name":"o_1gs4tsdjm1h67p7o1i111hvsjdl8.png"}
+root_server= /var/www/labima.sw19.it/web
+directoryfiles= /LABIMADB/file
+targetDirRemote= /LABIMADB/file/tb_experiments_1
+FTPUPLOADDIR= /web
+Ora invece ho messo FTPUPLOADDIR= /var/www/labima.sw19.it/web
+errore creazione directory /var/www/labima.sw19.it/web/LABIMADB/file/tb_experiments_1 oppure già presente
+filePath= ../tmpfiles/o_1gs4tsdjm1h67p7o1i111hvsjdl8.png

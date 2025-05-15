@@ -1,0 +1,7 @@
+CLEAN
+2021-05-22 12:51:14
+{"stato":"","idoperatore":"83","idsede":"","start":"2021-06-01T00:00:00+02:00","end":"2021-06-02T00:00:00+02:00"}
+2021-06-01
+2021-06-02
+SELECT pcs_attivita_clean.id as idattivita,u1.txtcolor,u1.bgcolor,CONCAT_WS(' ',u1.cognome,' ',u1.nome,'<br/>',u2.cognome,' ',u2.nome,'<br/>',u3.cognome,' ',u3.nome,'<br/>',u4.cognome,' ',u4.nome) as squadra,pcs_attivita_clean.id as idattivita,pcs_attivita_clean.stato as statoattivita,CONCAT(pcs_clienti.nome,' ',pcs_clienti.cognome) as nome_cliente,pcs_sedi_clienti.*,DATE_FORMAT(data_consigliata,'%d-%m-%Y') as data_consigliata_formatted, TIME_FORMAT(ora_consigliata_inizio,'%H:%i') as ora_consigliata_formatted,pcs_attivita_clean.* FROM pcs_attivita_clean JOIN pcs_users u1 ON u1.id_user=pcs_attivita_clean.operatore1 LEFT JOIN pcs_users u2 ON u2.id_user=pcs_attivita_clean.operatore2 LEFT JOIN pcs_users u3 ON u3.id_user=pcs_attivita_clean.operatore3 LEFT JOIN pcs_users u4 ON u4.id_user=pcs_attivita_clean.operatore4
+ JOIN pcs_sedi_clienti ON pcs_attivita_clean.id_sede=pcs_sedi_clienti.id  JOIN pcs_clienti ON pcs_clienti.id=pcs_sedi_clienti.id_cliente WHERE (data_consigliata BETWEEN '2021-06-01' AND '2021-06-02')    AND (pcs_attivita_clean.operatore1 IN ('83') OR pcs_attivita_clean.operatore2 IN ('83') OR pcs_attivita_clean.operatore2 IN ('83') OR pcs_attivita_clean.operatore4 IN ('83'))   ORDER by data_consigliata ASC
